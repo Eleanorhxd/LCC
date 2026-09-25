@@ -65,7 +65,7 @@ python train.py \
   --llama_model ./pretrained/llama-2-7b-chat-hf \
   --savedmodel_path ./save/mimic/run1 \
   --devices 1 \
-  --max_epochs 3
+  --max_epochs 30
 ```
 
 Validation only:
