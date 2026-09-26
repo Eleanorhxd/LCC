@@ -1,19 +1,6 @@
 #!/bin/bash
 
-# ============================================================================
-# LatentMorph Enhanced 训练脚本：放射学报告生成 + 双向潜在推理
-# 
-# 增强功能：
-# - 视觉潜在空间推理（VisionLatentReasoner）
-# - 跨模态对齐（CrossModalAligner）
-# - 增强一致性检测（EnhancedImageTextMatcher）
-# - 智能控制信号注入
-# 
-# 核心思想：
-# - 在报告生成过程中，不仅在文本空间推理，还在视觉潜在空间推理
-# - 跨模态对齐确保报告与图像语义一致
-# - 多步视觉推理提供更精确的一致性检测
-# ============================================================================
+
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
@@ -62,7 +49,7 @@ python -u "$REPO_ROOT/train.py" \
     --length_penalty 2.0 \
     --num_workers 8 \
     --devices 1 \
-    --max_epochs 15 \
+    --max_epochs 50 \
     --limit_val_batches 1.0 \
     --val_check_interval 1.0 \
     --num_sanity_val_steps 0 \
