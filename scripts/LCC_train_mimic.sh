@@ -56,6 +56,6 @@ python -u "$REPO_ROOT/train.py" \
     --latent_morph_vision_reasoning_heads 8 \
     \
     --latent_morph_use_cross_modal True \
-    --latent_morph_alignment_temp 0.1 \
+    --latent_morph_alignment_temp 0.07 \
     \
     2>&1 | tee -a ${savepath}/log.txt
